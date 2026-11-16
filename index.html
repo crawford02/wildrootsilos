@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Wildroot Silos</title>
-<meta name="description" content="Wildroot Silos: two converted grain silos and a cottage in Anaconda, Montana. Hot tub on site, 5 minutes from downtown, 20 minutes from Georgetown Lake, 30 minutes from the ski hill.">
+<meta name="description" content="Wildroot Silos: two converted grain silos and a cottage in Anaconda, Montana. Hot tub on site, 5 minutes from downtown, 20 minutes from Georgetown Lake, 30 minutes from Discovery Ski Hill.">
 <meta property="og:title" content="Wildroot Silos | Anaconda, Montana">
 <meta property="og:description" content="Two converted grain silos and a cottage, five minutes from downtown Anaconda.">
 <meta property="og:image" content="https://wildrootsilos.com/images/wildroot-silos.jpg">
@@ -72,14 +72,16 @@ section { padding: 72px 0; }
 .photo { aspect-ratio: 4 / 3; background-color: #d9ddd9; background-image: url("images/wildroot-silos.jpg"); background-size: 250% auto; background-repeat: no-repeat; }
 .photo.one { background-position: 2% 42%; }
 .photo.two { background-position: 97% 42%; }
-.photo.soon { background-image: none; display: grid; place-items: center; color: var(--slate); font-size: .85rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+.photo.cottage { background-image: url("images/cottage.jpg"); background-size: 190% auto; background-position: 4% 62%; }
 .stay .text { padding: 22px 22px 26px; display: grid; gap: 8px; }
 .stay p { color: var(--slate); font-size: .98rem; }
 .tag { font-size: .75rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--pine); }
 
 /* Hot tub */
 .tub { background: var(--pine); color: #fff; }
-.tub .wrap { display: grid; gap: 14px; }
+.tub .wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 36px 48px; align-items: center; }
+.tub .text { display: grid; gap: 14px; }
+.tub img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 36%; }
 .tub .eyebrow { color: #e9c08e; }
 .tub p { color: #dbe4de; font-size: 1.08rem; }
 
@@ -91,10 +93,17 @@ section { padding: 72px 0; }
 .miles strong { font-size: 1.05rem; }
 .miles span.note { color: var(--slate); font-size: .95rem; }
 
+/* Gallery */
+.gallery { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+.gallery img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; background: #d9ddd9; }
+#around { padding-top: 0; }
+
 /* Book */
 .book { background: var(--panel); border-top: 1px solid var(--rule); }
 .book .wrap { display: grid; gap: 18px; justify-items: start; }
 .book p { color: var(--slate); }
+.book .email { font-family: var(--display); font-size: clamp(1.4rem, 3.4vw, 2rem); color: var(--iron); overflow-wrap: anywhere; }
+footer a { color: #fff; }
 .status { display: inline-block; border: 1px solid var(--pine); color: var(--pine); font-weight: 700; font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; padding: 10px 16px; }
 
 footer { background: var(--iron); color: #c9cfcb; padding: 36px 0; font-size: .9rem; }
@@ -112,6 +121,7 @@ footer .brand { font-size: 1.15rem; }
       <a href="#stays">The Stays</a>
       <a href="#hot-tub">Hot Tub</a>
       <a href="#location">Location</a>
+      <a href="#around">Photos</a>
       <a class="btn" href="#book">Book</a>
     </nav>
   </div>
@@ -125,7 +135,7 @@ footer .brand { font-size: 1.15rem; }
   <div class="wrap intro">
     <p class="eyebrow">Anaconda, Montana</p>
     <h1>Two grain silos and a cottage, five minutes from downtown.</h1>
-    <p>Wildroot Silos is a small group of modern stays built inside converted grain silos, with a separate cottage alongside. Spend the day on the ski hill or at Georgetown Lake, then come back to the hot tub.</p>
+    <p>Wildroot Silos is a small group of modern stays built inside converted grain silos, with a separate cottage alongside. Spend the day at Discovery Ski Hill or Georgetown Lake, then come back to the hot tub.</p>
     <p><a class="btn dark" href="#stays">See the three stays</a></p>
   </div>
 
@@ -157,11 +167,11 @@ footer .brand { font-size: 1.15rem; }
           </div>
         </article>
         <article class="stay">
-          <div class="photo soon">Photos coming soon</div>
+          <div class="photo cottage" role="img" aria-label="The cottage, with a covered front porch and a large shade tree on the lawn"></div>
           <div class="text">
             <p class="tag">Cottage</p>
             <h3>The Cottage</h3>
-            <p>A separate cottage on the same property. Full details and photos are on the way.</p>
+            <p>A separate cottage on the same property, with a covered porch looking over the lawn. Full details are on the way.</p>
           </div>
         </article>
       </div>
@@ -170,9 +180,12 @@ footer .brand { font-size: 1.15rem; }
 
   <section id="hot-tub" class="tub">
     <div class="wrap">
-      <p class="eyebrow">On the property</p>
-      <h2>A hot tub under Montana sky</h2>
-      <p>There is a hot tub on site. It is the best seat on the property after a day of skiing, fishing or walking around town.</p>
+      <div class="text">
+        <p class="eyebrow">On the property</p>
+        <h2>A hot tub under Montana sky</h2>
+        <p>The hot tub sits out in the open with the mountains in front of you. It is the best seat on the property after a day of skiing, fishing or walking around town.</p>
+      </div>
+      <img src="images/hot-tub.jpg" width="1200" height="1600" loading="lazy" alt="The hot tub on its concrete pad, with snow on the ground and snow-capped mountains behind.">
     </div>
   </section>
 
@@ -196,9 +209,29 @@ footer .brand { font-size: 1.15rem; }
         </li>
         <li>
           <span class="num">30<small>min</small></span>
-          <strong>The ski hill</strong>
+          <strong>Discovery Ski Hill</strong>
           <span class="note">Skiing and snowboarding through the winter.</span>
         </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="around">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Photos</p>
+        <h2>Around the property</h2>
+        <p>Open pasture, a pond, mountain views in every direction, and a few neighbors.</p>
+      </div>
+      <ul class="gallery">
+        <li><img src="images/silos-sunset.jpg" width="1600" height="1200" loading="lazy" alt="The two silos at sunset with mountains behind." style="object-position: 30% 50%"></li>
+        <li><img src="images/pond-sunset.jpg" width="1600" height="1200" loading="lazy" alt="Sunset clouds reflected in the pond, with a silo at the edge of the frame."></li>
+        <li><img src="images/fire-table-dusk.jpg" width="1200" height="1600" loading="lazy" alt="A gas fire table lit on the covered porch at dusk." style="object-position: 50% 62%"></li>
+        <li><img src="images/pond-and-silo.jpg" width="1200" height="1600" loading="lazy" alt="The pond on a clear day with a silo and mountains beyond." style="object-position: 50% 35%"></li>
+        <li><img src="images/silos-through-trees.jpg" width="1600" height="1200" loading="lazy" alt="The silos seen across the lawn between two trees."></li>
+        <li><img src="images/smelter-stack-view.jpg" width="1200" height="1600" loading="lazy" alt="View across the pasture to the Anaconda smelter stack." style="object-position: 50% 12%"></li>
+        <li><img src="images/bull-in-pasture.jpg" width="1200" height="1600" loading="lazy" alt="A red bull standing in the neighboring pasture." style="object-position: 50% 45%"></li>
+        <li><img src="images/bald-eagle.jpg" width="1200" height="1600" loading="lazy" alt="A bald eagle perched on a fence post." style="object-position: 35% 30%"></li>
       </ul>
     </div>
   </section>
@@ -206,10 +239,11 @@ footer .brand { font-size: 1.15rem; }
   <section id="book" class="book">
     <div class="wrap">
       <p class="eyebrow">Book</p>
-      <h2>Online booking is coming soon</h2>
-      <p>We are setting up direct booking for both silos and the cottage. Check back shortly to reserve your dates.</p>
-      <!-- TODO: add enquiry email / phone, then swap this for the booking system -->
-      <span class="status">Booking opens soon</span>
+      <h2>Email us to book your stay</h2>
+      <p>Online booking is coming soon. Until then, send us your dates and which space you would like, and we will get back to you.</p>
+      <a class="email" href="mailto:wildrootsilos@gmail.com">wildrootsilos@gmail.com</a>
+      <!-- TODO: swap this for the booking system -->
+      <span class="status">Online booking opens soon</span>
     </div>
   </section>
 </main>
@@ -217,7 +251,7 @@ footer .brand { font-size: 1.15rem; }
 <footer>
   <div class="wrap">
     <span class="brand">Wildroot Silos</span>
-    <span>Anaconda, Montana &middot; Stay &middot; Explore &middot; Unwind</span>
+    <span>Anaconda, Montana &middot; <a href="mailto:wildrootsilos@gmail.com">wildrootsilos@gmail.com</a></span>
   </div>
 </footer>
 
